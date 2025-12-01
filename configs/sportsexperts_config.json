@@ -6,9 +6,9 @@
   "table_name": "sportsexperts_products",
   "icon_url": "https://www.sportsexperts.ca/favicon.ico",
   "bark_urls": [
-    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
-    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
-    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+    "https://api.day.app/SLqpVbafocFSrHMFVK7Ft5k/",
+    "https://api.day.app/wvW5ajnQfPZBZVAM5vwjAbm/",
+    "https://api.day.app/ScqAa3Kv7Ed9XV9E7tLdFEN/"
   ],
   "impersonate": "chrome120",
   "delay": 2,
