@@ -6,9 +6,9 @@
   "table_name": "lacordee_products",
   "icon_url": "https://www.lacordee.com/storefront-static/favicon/apple-touch-icon.png",
   "bark_urls": [
-    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
-    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
-    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5ka/",
+    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbma/",
+    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFENa/"
   ],
   "impersonate": "chrome120",
   "delay": 2,
