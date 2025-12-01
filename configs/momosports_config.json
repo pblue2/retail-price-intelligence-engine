@@ -6,9 +6,9 @@
   "table_name": "momosports_products",
   "icon_url": "https://momosports.ca/media/favicon/stores/1/favicon.png",
   "bark_urls": [
-    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
-    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
-    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5ak/",
+    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAabm/",
+    "https://api.day.app/ScqA3Kv7Ed9XaV9E7tLdFEN/"
   ],
   "impersonate": "chrome120",
   "delay": 2,
