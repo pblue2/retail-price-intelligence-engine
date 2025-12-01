@@ -6,9 +6,9 @@
   "table_name": "sportinglife_products",
   "icon_url": "https://www.sportinglife.ca/on/demandware.static/Sites-SportingLife-Site/-/default/dwb276aad8/images/favicon.ico",
   "bark_urls": [
-    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
-    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
-    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+    "https://api.day.app/SLqpVbfocFSarHMFVK7Ft5k/",
+    "https://api.day.app/wvW5janQfPZBZVAM5vwjAbm/",
+    "https://api.day.app/ScqA3aKv7Ed9XV9E7tLdFEN/"
   ],
   "impersonate": "chrome120",
   "delay": 2,
