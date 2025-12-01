@@ -1,0 +1,32 @@
+{
+  "site_name": "Momo Sports",
+  "base_url": "https://momosports.ca",
+  "db_path": "/app/data/momosports.db",
+  "log_path": "/app/logs/momosports.log",
+  "table_name": "momosports_products",
+  "icon_url": "https://momosports.ca/media/favicon/stores/1/favicon.png",
+  "bark_urls": [
+    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
+    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
+    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+  ],
+  "impersonate": "chrome120",
+  "delay": 2,
+
+  "request_method": "GET",
+  "api_url": "https://momosports.ca/en/brands/arcteryx",
+  
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "x-requested-with": "XMLHttpRequest",
+    "accept": "*/*",
+    "accept-language": "en,zh-CN;q=0.9,zh;q=0.8"
+  },
+  "cookies": {},
+  "payload_template": {},
+  
+  "pagination": {
+      "page_size": 36,
+      "max_pages": 10
+  }
+}

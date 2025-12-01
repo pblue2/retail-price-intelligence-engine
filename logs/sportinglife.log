@@ -1,0 +1,72 @@
+[2025-10-28 23:24:41] ✅ 数据库 '/mnt/scraper/data/sportinglife.db' 及表 'sportinglife_products' 初始化完成。
+[2025-10-28 23:24:41] 
+==================== 开始为 Sporting Life 执行抓取任务 ====================
+[2025-10-28 23:24:41] 📦 正在通过GET请求抓取页面: https://www.sportinglife.ca/en-CA/arcteryx?format=ajax&infinite=true
+[2025-10-28 23:24:42] 🤖 正在使用 BeautifulSoup 解析HTML内容...
+[2025-10-28 23:24:42] ❌ 在SportingLifeScraper中解析HTML出错: could not convert string to float: '1 10000 '
+[2025-10-28 23:24:42] ℹ️ 未抓取到任何商品，任务结束。
+[2025-10-28 23:28:38] ✅ 数据库 '/mnt/scraper/data/sportinglife.db' 及表 'sportinglife_products' 初始化完成。
+[2025-10-28 23:28:38] 
+==================== 开始为 Sporting Life 执行抓取任务 ====================
+[2025-10-28 23:28:38] 📦 正在通过GET请求抓取页面: https://www.sportinglife.ca/en-CA/arcteryx?format=ajax&infinite=true
+[2025-10-28 23:28:40] 🤖 正在使用 BeautifulSoup 解析HTML内容...
+[2025-10-28 23:28:40] ✅ 解析完成，共找到 60 个商品。
+[2025-10-28 23:28:40] 🚀 检测到为首次运行或数据库为空，本次只进行数据初始化，不发送通知。
+[2025-10-28 23:28:40] 💾 数据库已更新。当前共有 60 个活跃商品。
+[2025-10-28 23:28:40] ✅ Sporting Life 任务成功结束。共抓取/更新 60 个商品。
+[2025-10-28 23:32:09] ✅ 数据库 '/mnt/scraper/data/sportinglife.db' 及表 'sportinglife_products' 初始化完成。
+[2025-10-28 23:32:09] 
+==================== 开始为 Sporting Life 执行抓取任务 ====================
+[2025-10-28 23:32:09] 📦 正在通过GET请求抓取页面: https://www.sportinglife.ca/en-CA/arcteryx?sz=230&format=ajax&infinite=true
+[2025-10-28 23:32:18] 🤖 正在使用 BeautifulSoup 解析HTML内容...
+[2025-10-28 23:32:18] ✅ 解析完成，共找到 195 个商品。
+[2025-10-28 23:32:18] 🔍 非首次运行，开始检查商品更新并发送通知...
+[2025-10-28 23:32:18] 🔍 正在将 195 个抓取商品与 60 条数据库记录进行比较...
+[2025-10-28 23:32:18]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:21]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:23]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:26]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:28]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:31]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:33]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:36]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:38]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:40]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:40]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:43]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:45]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:45]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:47]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:48]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:48]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:49]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:49]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:50]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:50]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:53]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:54]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:55]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:32:55]     -> 📱 准备发送通知: 【Sporting Life】新品上架
+[2025-10-28 23:32:56]     -> ❌ Bark 推送失败: Failed to perform, curl: (23) Failure writing output to destination, passed 13 returned 0. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+[2025-10-28 23:38:12] ✅ 数据库 '/mnt/scraper/data/sportinglife.db' 及表 'sportinglife_products' 初始化完成。
+[2025-10-28 23:38:12] 
+==================== 开始为 Sporting Life 执行抓取任务 ====================
+[2025-10-28 23:38:12] 📦 正在通过GET请求抓取页面: https://www.sportinglife.ca/en-CA/arcteryx?sz=230&format=ajax&infinite=true
+[2025-10-28 23:38:15] 🤖 正在使用 BeautifulSoup 解析HTML内容...
+[2025-10-28 23:38:15] ⚠️ 无法解析商品 'Women's Incendia Jacket' 的价格: '1 100,00 $'. 错误: could not convert string to float: '1 10000 '. 将价格记为0。
+[2025-10-28 23:38:15] ⚠️ 无法解析商品 'Men's Therme Down Parka' 的价格: '1 100,00 $'. 错误: could not convert string to float: '1 10000 '. 将价格记为0。
+[2025-10-28 23:38:15] ⚠️ 无法解析商品 'Parka Beta en duvet pour femmes' 的价格: '1 100,00 $'. 错误: could not convert string to float: '1 10000 '. 将价格记为0。
+[2025-10-28 23:38:15] ⚠️ 无法解析商品 'Parka Beta en duvet pour femmes' 的价格: '1 100,00 $'. 错误: could not convert string to float: '1 10000 '. 将价格记为0。
+[2025-10-28 23:38:16] ✅ 解析完成，共找到 195 个商品。
+[2025-10-28 23:38:16] 🚀 检测到为首次运行或数据库为空，本次只进行数据初始化，不发送通知。
+[2025-10-28 23:38:16] 💾 数据库已更新。当前共有 195 个活跃商品。
+[2025-10-28 23:38:16] ✅ Sporting Life 任务成功结束。共抓取/更新 195 个商品。
+[2025-10-28 23:39:43] ✅ 数据库 '/mnt/scraper/data/sportinglife.db' 及表 'sportinglife_products' 初始化完成。
+[2025-10-28 23:39:43] 
+==================== 开始为 Sporting Life 执行抓取任务 ====================
+[2025-10-28 23:39:43] 📦 正在通过GET请求抓取页面: https://www.sportinglife.ca/en-CA/arcteryx?sz=230&format=ajax&infinite=true
+[2025-10-28 23:39:43] 🤖 正在使用 BeautifulSoup 解析HTML内容...
+[2025-10-28 23:39:44] ✅ 解析完成，共找到 195 个商品。
+[2025-10-28 23:39:44] 🚀 检测到为首次运行或数据库为空，本次只进行数据初始化，不发送通知。
+[2025-10-28 23:39:44] 💾 数据库已更新。当前共有 195 个活跃商品。
+[2025-10-28 23:39:44] ✅ Sporting Life 任务成功结束。共抓取/更新 195 个商品。

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # 部署的名称
+  name: sportinglife-scraper
+spec:
+  # 我们希望K3s始终保持运行1个此应用的实例
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sportinglife-scraper
+  template:
+    metadata:
+      labels:
+        app: sportinglife-scraper
+    spec:
+      containers:
+      - name: scraper-container
+        # 这里填写您将要构建的镜像名称
+        # 格式通常是 <您的DockerHub用户名>/<镜像名>:<标签>
+        image: zhalei/sportinglife-scraper:latest
+        
+        # 挂载数据卷，确保持久化存储
+        volumeMounts:
+        - name: scraper-data
+          mountPath: /app/data
+        - name: scraper-logs
+          mountPath: /app/logs
+      
+      # 定义持久化数据卷
+      volumes:
+      - name: scraper-data
+        # 使用hostPath将容器内的数据目录直接映射到K3s节点(宿主机)的物理路径上
+        # 这样即使Pod被删除重建，数据和日志也不会丢失
+        hostPath:
+          path: /mnt/scraper/data
+          type: DirectoryOrCreate
+      - name: scraper-logs
+        hostPath:
+          path: /mnt/scraper/logs
+          type: DirectoryOrCreate

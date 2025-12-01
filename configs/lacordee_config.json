@@ -1,0 +1,21 @@
+{
+  "site_name": "LaCordee",
+  "base_url": "https://www.lacordee.com/en",
+  "db_path": "/app/data/lacordee.db",
+  "log_path": "/app/logs/lacordee.log",
+  "table_name": "lacordee_products",
+  "icon_url": "https://www.lacordee.com/storefront-static/favicon/apple-touch-icon.png",
+  "bark_urls": [
+    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
+    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
+    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+  ],
+  "impersonate": "chrome120",
+  "delay": 2,
+
+  "search_url": "https://www.lacordee.com/en/search.html?query=Arcteryx",
+  "max_pages": 5,
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  }
+}

@@ -1,0 +1,5 @@
+# 每10分钟以root用户身份执行一次爬虫脚本
+# 将所有输出（标准输出和标准错误）都重定向到容器的主日志流，以便kubectl logs可以捕获到
+*/10 * * * * root    python /app/run_scraper.py /app/configs/sportsexperts_config.json >> /proc/1/fd/1 2>&1
+
+# crontab 文件需要一个空行结尾

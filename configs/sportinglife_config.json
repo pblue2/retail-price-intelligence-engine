@@ -1,0 +1,24 @@
+{
+  "site_name": "Sporting Life",
+  "base_url": "https://www.sportinglife.ca",
+  "db_path": "/app/data/sportinglife.db",
+  "log_path": "/app/logs/sportinglife.log",
+  "table_name": "sportinglife_products",
+  "icon_url": "https://www.sportinglife.ca/on/demandware.static/Sites-SportingLife-Site/-/default/dwb276aad8/images/favicon.ico",
+  "bark_urls": [
+    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
+    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
+    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+  ],
+  "impersonate": "chrome120",
+  "delay": 2,
+
+  "request_method": "GET",
+  "api_url": "https://www.sportinglife.ca/en-CA/arcteryx?sz=230&format=ajax&infinite=true",
+  
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  },
+  "cookies": {},
+  "payload_template": {}
+}

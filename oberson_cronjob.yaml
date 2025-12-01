@@ -1,0 +1,36 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: oberson-cronjob
+spec:
+  # 每10分钟执行一次 (在第 6, 16, 26... 分钟) - 错开其他任务
+  schedule: "6-59/10 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          # --- 安全上下文 ---
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+            fsGroup: 1000
+          volumes:
+            - name: scraper-data
+              hostPath:
+                path: /mnt/scraper/data
+                type: DirectoryOrCreate
+            - name: scraper-logs
+              hostPath:
+                path: /mnt/scraper/logs
+                type: DirectoryOrCreate
+          containers:
+            - name: scraper-container
+              image: zhalei/all-scrapers-cron:latest
+              imagePullPolicy: Always
+              command: ["python", "run_scraper.py", "configs/oberson_config.json"]
+              volumeMounts:
+                - name: scraper-data
+                  mountPath: /app/data
+                - name: scraper-logs
+                  mountPath: /app/logs
+          restartPolicy: OnFailure

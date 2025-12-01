@@ -1,0 +1,36 @@
+{
+  "site_name": "Sports Experts",
+  "base_url": "https://www.sportsexperts.ca",
+  "db_path": "/app/data/sportsexperts.db",
+  "log_path": "/app/logs/sportsexperts.log",
+  "table_name": "sportsexperts_products",
+  "icon_url": "https://www.sportsexperts.ca/favicon.ico",
+  "bark_urls": [
+    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
+    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
+    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+  ],
+  "impersonate": "chrome120",
+  "delay": 2,
+  "main_page_url": "https://www.sportsexperts.ca/en-CA/brands/local-brands/arcteryx?sz=96",
+  "api_url": "https://www.sportsexperts.ca/api/fglsearchquery/loadmore",
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Content-Type": "application/json",
+    "Referer": "https://www.sportsexperts.ca/en-CA/brands/local-brands/arcteryx",
+    "x-requested-with": "XMLHttpRequest",
+    "origin": "https://www.sportsexperts.ca"
+  },
+  "pagination": {
+    "page_size": 24,
+    "max_pages": 15
+  },
+  "payload_template": {
+    "Page": 1,
+    "PageSize": 24,
+    "StartIndex": 0,
+    "Url": "https://www.sportsexperts.ca/en-CA/brands/local-brands/arcteryx",
+    "Keywords": null,
+    "QueryName": "Arc'teryx"
+  }
+}

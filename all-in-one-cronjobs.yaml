@@ -1,0 +1,143 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: sportsexperts-cronjob
+spec:
+  # 每10分钟执行一次 (在第 0, 10, 20... 分钟)
+  schedule: "*/10 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          # --- 关键：安全上下文 ---
+          securityContext:
+            runAsUser: 1000  # 以 UID 1000 (appuser) 运行
+            runAsGroup: 1000 # 以 GID 1000 (appuser) 运行
+            fsGroup: 1000    # 确保挂载的卷也属于这个组
+          volumes:
+            - name: scraper-data
+              hostPath:
+                path: /mnt/scraper/data
+                type: DirectoryOrCreate
+            - name: scraper-logs
+              hostPath:
+                path: /mnt/scraper/logs
+                type: DirectoryOrCreate
+          containers:
+            - name: scraper-container
+              image: zhalei/all-scrapers-cron:latest # 使用我们统一的镜像
+              imagePullPolicy: Always
+              command: ["python", "run_scraper.py", "configs/sportsexperts_config.json"]
+              volumeMounts:
+                - name: scraper-data
+                  mountPath: /app/data
+                - name: scraper-logs
+                  mountPath: /app/logs
+          restartPolicy: OnFailure
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: sportinglife-cronjob
+spec:
+  # 每10分钟执行一次 (在第 2, 12, 22... 分钟)
+  schedule: "2-59/10 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+            fsGroup: 1000
+          volumes:
+            - name: scraper-data
+              hostPath:
+                path: /mnt/scraper/data
+                type: DirectoryOrCreate
+            - name: scraper-logs
+              hostPath:
+                path: /mnt/scraper/logs
+                type: DirectoryOrCreate
+          containers:
+            - name: scraper-container
+              image: zhalei/all-scrapers-cron:latest
+              imagePullPolicy: Always
+              command: ["python", "run_scraper.py", "configs/sportinglife_config.json"]
+              volumeMounts:
+                - name: scraper-data
+                  mountPath: /app/data
+                - name: scraper-logs
+                  mountPath: /app/logs
+          restartPolicy: OnFailure
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: momosports-cronjob
+spec:
+  # 每10分钟执行一次 (在第 4, 14, 24... 分钟)
+  schedule: "4-59/10 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+            fsGroup: 1000
+          volumes:
+            - name: scraper-data
+              hostPath:
+                path: /mnt/scraper/data
+                type: DirectoryOrCreate
+            - name: scraper-logs
+              hostPath:
+                path: /mnt/scraper/logs
+                type: DirectoryOrCreate
+          containers:
+            - name: scraper-container
+              image: zhalei/all-scrapers-cron:latest
+              imagePullPolicy: Always
+              command: ["python", "run_scraper.py", "configs/momosports_config.json"]
+              volumeMounts:
+                - name: scraper-data
+                  mountPath: /app/data
+                - name: scraper-logs
+                  mountPath: /app/logs
+          restartPolicy: OnFailure
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: lacordee-cronjob
+spec:
+  schedule: "6-59/10 * * * *"  # 每10分钟，第6分钟
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+            fsGroup: 1000
+          volumes:
+            - name: scraper-data
+              hostPath:
+                path: /mnt/scraper/data
+                type: DirectoryOrCreate
+            - name: scraper-logs
+              hostPath:
+                path: /mnt/scraper/logs
+                type: DirectoryOrCreate
+          containers:
+            - name: scraper-container
+              image: zhalei/all-scrapers-cron:latest
+              imagePullPolicy: Always
+              command: ["python", "run_scraper.py", "configs/lacordee_config.json"]
+              volumeMounts:
+                - name: scraper-data
+                  mountPath: /app/data
+                - name: scraper-logs
+                  mountPath: /app/logs
+          restartPolicy: OnFailure

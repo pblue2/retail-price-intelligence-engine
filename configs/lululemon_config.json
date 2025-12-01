@@ -1,0 +1,48 @@
+{
+  "site_name": "Lululemon",
+  "base_url": "https://shop.lululemon.com/en-ca",
+  "db_path": "/mnt/scraper/data/lulu_scraper.db",
+  "log_path": "/mnt/scraper/logs/lulu_scraper.log",
+  "table_name": "lululemon_products",
+  "icon_url": "https://shop.lululemon.com/favicon.ico",
+  "bark_urls": [
+    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
+    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
+    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+  ],
+  "impersonate": "chrome120",
+  "discount_threshold": 65,
+  "delay": 1.5,
+  "api_url": "https://shop.lululemon.com/snb/graphql",
+  "url_suffix": "?color=0001",
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Content-Type": "application/json",
+    "x-lll-client": "cdp-api",
+    "origin": "https://shop.lululemon.com"
+  },
+  "cookies": {
+    "Country": "CA",
+    "UsrLocale": "en_CA",
+    "sl": "CA"
+  },
+  "pagination": {
+      "max_pages": 50
+  },
+  "payload_template": {
+    "query": "query CategoryPageDataQuery($category: String!, $cid: String, $forceMemberCheck: Boolean, $nValue: String, $cdpHash: String, $sl: String!, $locale: String!, $Ns: String, $storeId: String, $pageSize: Int, $page: Int, $onlyStore: Boolean, $useHighlights: Boolean, $abFlags: [String], $styleboost: [String], $fusionExperimentVariant: String) {\n      categoryPageData(category: $category, nValue: $nValue, cdpHash: $cdpHash, locale: $locale, sl: $sl, Ns: $Ns, page: $page, pageSize: $pageSize, storeId: $storeId, onlyStore: $onlyStore, forceMemberCheck: $forceMemberCheck, cid: $cid, useHighlights: $useHighlights, abFlags: $abFlags, styleboost: $styleboost, fusionExperimentVariant: $fusionExperimentVariant) {\n        results: totalProducts\n        products { displayName listPrice productSalePrice: salePrice pdpUrl productId swatches { primaryImage } }\n      }\n    }",
+    "variables": {
+        "pageSize": 60,
+        "page": 1,
+        "useHighlights": true,
+        "onlyStore": false,
+        "abFlags": ["cdpSeodsEnabled"],
+        "category": "we-made-too-much",
+        "cdpHash": "n18mhd",
+        "forceMemberCheck": false,
+        "locale": "en_CA",
+        "sl": "CA"
+    },
+    "operationName": "CategoryPageDataQuery"
+  }
+}

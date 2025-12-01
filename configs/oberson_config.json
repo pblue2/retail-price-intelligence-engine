@@ -1,0 +1,20 @@
+{
+  "site_name": "Oberson",
+  "base_url": "https://oberson.com",
+  "db_path": "/app/data/oberson.db",
+  "log_path": "/app/logs/oberson.log",
+  "table_name": "oberson_products",
+  "icon_url": "https://cdn.shopify.com/s/files/1/0766/0447/3646/files/OBERSON._-_FAVICON_-_32x32_1.png",
+  "bark_urls": [
+    "https://api.day.app/SLqpVbfocFSrHMFVK7Ft5k/",
+    "https://api.day.app/wvW5jnQfPZBZVAM5vwjAbm/",
+    "https://api.day.app/ScqA3Kv7Ed9XV9E7tLdFEN/"
+  ],
+  "impersonate": "chrome120",
+  "delay": 1,
+
+  "main_page_url": "https://oberson.com/en/collections/arcteryx",
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  }
+}

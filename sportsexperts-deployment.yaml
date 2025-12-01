@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sportsexperts-scraper-deployment
+spec:
+  # 确保始终有1个容器实例在运行
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sportsexperts-scraper
+  template:
+    metadata:
+      labels:
+        app: sportsexperts-scraper
+    spec:
+      containers:
+      - name: scraper-container
+        # 镜像名称: 请确保 zhalei 是您的 Docker Hub 用户名
+        image: zhalei/sportsexperts-scraper-cron:latest
+        imagePullPolicy: Always
+        
+        # 数据卷挂载，确保持久化
+        volumeMounts:
+        - name: scraper-data
+          mountPath: /app/data
+        - name: scraper-logs
+          mountPath: /app/logs
+      
+      # 定义持久化数据卷
+      volumes:
+      - name: scraper-data
+        hostPath:
+          path: /mnt/scraper/data
+          type: DirectoryOrCreate
+      - name: scraper-logs
+        hostPath:
+          path: /mnt/scraper/logs
+          type: DirectoryOrCreate
